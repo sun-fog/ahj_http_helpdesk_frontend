@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>HelpDesk</title>
+</head>
+<body>
+  <header class="header">
+    <h1 class="header__title">HelpDesk</h1>
+    <button class="button button_add" id="add-ticket">Добавить тикет</button>
+  </header>
+
+  <main class="tickets" id="tickets"></main>
+
+  <div class="loader hidden" id="loader"></div>
+  <div class="error hidden" id="error"></div>
+
+  <!-- Модальное окно добавления / редактирования -->
+  <div class="modal hidden" id="ticket-modal">
+    <div class="modal__box">
+      <h2 class="modal__title" id="modal-title">Добавить тикет</h2>
+      <form id="ticket-form">
+        <label class="form-field">
+          Краткое описание
+          <input name="name" required placeholder="Краткое описание">
+        </label>
+        <label class="form-field">
+          Подробное описание
+          <textarea name="description" rows="4" placeholder="Что случилось?"></textarea>
+        </label>
+        <div class="modal__actions">
+          <button type="button" class="button" data-close>Отмена</button>
+          <button type="submit" class="button button_ok">Ок</button>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <!-- Модальное окно подтверждения удаления -->
+  <div class="modal hidden" id="confirm-modal">
+    <div class="modal__box">
+      <h2 class="modal__title">Удалить тикет?</h2>
+      <p class="modal__text">Вы действительно хотите удалить тикет? Это действие необратимо.</p>
+      <div class="modal__actions">
+        <button type="button" class="button" id="confirm-no">Отмена</button>
+        <button type="button" class="button button_ok" id="confirm-yes">Ок</button>
+      </div>
+    </div>
+  </div>
+
+  <script src="./js/index.js"></script>
+</body>
+</html>
