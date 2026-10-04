@@ -1,7 +1,7 @@
 # HelpDesk: Frontend
 
 Домашнее задание к занятию «Работа с HTTP»
-([netology-code/ahj-homeworks, ветка AHJ-50, каталог http](https://github.com/netology-code/ahj-homeworks/tree/AHJ-50/http)).
+![CI](https://github.com/sun-fog/ahj_http_helpdesk_frontend/actions/workflows/deploy.yml/badge.svg)
 
 Фронтенд сервиса управления заявками (тикеты), который работает с готовым API:
 
